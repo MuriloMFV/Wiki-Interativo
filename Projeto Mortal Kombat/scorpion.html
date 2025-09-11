@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mortal Kombat - Guide</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/css/personagens.css" />
+  </head>
+  <body>
+    <button class="btn-voltar" onclick="window.location.href='index.html'">← Voltar para Seleção</button>
+
+    <header class="cabecalho">
+      <img class="logo" src="src/imagens/Mk1_logo.webp" alt="Logo Mortal Kombat" />
+    </header>
+
+    <main class="container">
+      <!-- Página individual do Scorpion -->
+      <section class="pagina-personagem" id="pagina-scorpion">
+        <div class="detalhes-personagem">
+          <img class="imagem-destaque" src="https://i.pinimg.com/736x/d8/c4/09/d8c409eb12b3020fd4f684c98a8bb22b.jpg" alt="Scorpion">
+          <h2 class="nome-destaque">Scorpion</h2>
+          
+          <div class="info-grid">
+            <div class="info-box">
+              <h3>Biografia</h3>
+              <p>Scorpion, também conhecido como Hanzo Hasashi, é um espectro vingativo que retornou dos reinos infernais. Ele foi assassinado por Sub-Zero e busca vingança contra aqueles que destruíram seu clã e família.</p>
+            </div>
+            
+            <div class="info-box">
+              <h3>Habilidades Especiais</h3>
+              <ul>
+                <li>Spear (Lança): Puxa os oponentes para perto</li>
+                <li>Teleport: Teletransporte rápido</li>
+                <li>Hellfire: Manipulação de fogo infernal</li>
+                <li>Kunai: Arremesso de adagas</li>
+              </ul>
+            </div>
+            
+            <div class="info-box">
+              <h3>Fatalities</h3>
+              <ul>
+                <li>Toasty!: Remove a cabeça do oponente e queima o corpo</li>
+                <li>Hellfire Torment: Incinera o oponente em chamas</li>
+              </ul>
+            </div>
+            
+            <div class="info-box">
+              <h3>Curiosidades</h3>
+              <p>Scorpion é um dos personagens mais icônicos da série Mortal Kombat. Sua famosa frase "Get over here!" é uma das mais reconhecíveis nos jogos de luta.</p>
+            </div>
+          </div>
+
+          <div class="movelist">
+            <h3>Lista de Movimentos</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Movimento</th>
+                  <th>Comando</th>
+                  <th>Dano</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Spear</td>
+                  <td>→, →, X</td>
+                  <td>8%</td>
+                </tr>
+                <tr>
+                  <td>Teleport Punch</td>
+                  <td>↓, →, Y</td>
+                  <td>12%</td>
+                </tr>
+                <tr>
+                  <td>Hellfire</td>
+                  <td>↓, ←, A</td>
+                  <td>10%</td>
+                </tr>
+                <tr>
+                  <td>Air Throw</td>
+                  <td>⭯ + B (no ar)</td>
+                  <td>14%</td>
+                </tr>
+                <tr>
+                  <td>Death Spin</td>
+                  <td>←, →, X</td>
+                  <td>9%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Controle de Áudio -->
+    <div class="audio-control">
+      <button id="toggleAudio">🔈</button>
+      <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="0.5">
+    </div>
+    
+    <!-- Elemento de Áudio -->
+    <audio id="backgroundAudio" loop>
+      <source src="https://www.soundboard.com/handler/DownLoadTrack.ashx?cliptitle=Character+Select&filename=mp3/MTI1ODExMjUxMTI1ODQ0_J6ltttDxSbo.mp3" type="audio/mpeg">
+      Seu navegador não suporta o elemento de áudio.
+    </audio>
+     
+    <script>
+      // Controle do áudio em loop
+      document.addEventListener('DOMContentLoaded', function() {
+        const audio = document.getElementById('backgroundAudio');
+        const toggleButton = document.getElementById('toggleAudio');
+        const volumeControl = document.getElementById('volumeControl');
+        
+        // Tenta reproduzir o áudio
+        audio.volume = 0.5; // Volume inicial em 50%
+        
+        // Política de autoplay - só inicia após interação do usuário
+        let audioStarted = false;
+        
+        function startAudio() {
+          if (!audioStarted) {
+            audio.play().catch(error => {
+              console.log('Reprodução automática impedida:', error);
+            });
+            audioStarted = true;
+          }
+        }
+        
+        // Iniciar áudio no primeiro clique em qualquer lugar da página
+        document.body.addEventListener('click', function() {
+          startAudio();
+        }, { once: true });
+        
+        // Controle de play/pause
+        toggleButton.addEventListener('click', function() {
+          if (audio.paused) {
+            audio.play();
+            toggleButton.textContent = '🔊';
+          } else {
+            audio.pause();
+            toggleButton.textContent = '🔈';
+          }
+        });
+        
+        // Controle de volume
+        volumeControl.addEventListener('input', function() {
+          audio.volume = this.value;
+          if (this.value == 0) {
+            toggleButton.textContent = '🔇';
+          } else {
+            toggleButton.textContent = audio.paused ? '🔈' : '🔊';
+          }
+        });
+        
+        // Atualizar ícone quando o áudio terminar (embora esteja em loop)
+        audio.addEventListener('pause', function() {
+          if (!audio.paused) return;
+          toggleButton.textContent = '🔈';
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,252 @@
+  * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Oxanium", cursive;
+        background-color: #000000;
+        color: #ffffff;
+        overflow-x: hidden;
+      }
+
+      body::before {
+        content: "";
+        background-image: url(../imagens/mk2-stage-the-pit2.gif);
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: -1;
+        opacity: 0.8;
+      }
+
+      .cabecalho {
+        display: flex;
+        justify-content: center;
+        padding: 30px 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        border-bottom: 2px solid #e60a0a;
+        box-shadow: 0 0 20px rgba(230, 10, 10, 0.5);
+        margin-bottom: 30px;
+      }
+
+      .cabecalho img {
+        max-width: 290px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .btn-voltar {
+        position: absolute;
+        top: 30px;
+        left: 20px;
+        padding: 10px 20px;
+        background: linear-gradient(to bottom, #333, #000);
+        color: white;
+        border: 1px solid #8a0303;
+        border-radius: 5px;
+        font-family: "Oxanium", cursive;
+        cursor: pointer;
+        transition: all 0.3s;
+        z-index: 10;
+      }
+
+      .btn-voltar:hover {
+        background: linear-gradient(to bottom, #444, #111);
+        border-color: #e60a0a;
+      }
+
+      .pagina-personagem {
+        display: block;
+        padding: 40px 20px;
+      }
+
+      .detalhes-personagem {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 1000px;
+        margin: 0 auto;
+        background: rgba(0, 0, 0, 0.7);
+        border: 2px solid #e60a0a;
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 0 30px rgba(230, 10, 10, 0.4);
+      }
+
+      .detalhes-personagem .imagem-destaque {
+        width: 350px;
+        height: 450px;
+        object-fit: cover;
+        border: 3px solid #e60a0a;
+        border-radius: 10px;
+        box-shadow: 0 0 25px rgba(230, 10, 10, 0.6);
+        margin-bottom: 25px;
+      }
+
+      .detalhes-personagem .nome-destaque {
+        font-size: 36px;
+        color: #e60a0a;
+        text-shadow: 0 0 10px #ff0000;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        border-bottom: 2px solid #e60a0a;
+        padding-bottom: 10px;
+        width: 100%;
+        text-align: center;
+      }
+
+      .info-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      .info-box {
+        background: rgba(138, 3, 3, 0.15);
+        border: 1px solid #8a0303;
+        border-radius: 10px;
+        padding: 20px;
+      }
+
+      .info-box h3 {
+        color: #e60a0a;
+        font-size: 20px;
+        margin-bottom: 15px;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        border-bottom: 1px solid #8a0303;
+        padding-bottom: 8px;
+      }
+
+      .info-box p, .info-box ul {
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      .info-box ul {
+        list-style-type: none;
+        padding-left: 20px;
+      }
+
+      .info-box li {
+        margin-bottom: 8px;
+        position: relative;
+      }
+
+      .info-box li:before {
+        content: "●";
+        color: #e60a0a;
+        font-size: 14px;
+        position: absolute;
+        left: -20px;
+        top: 2px;
+      }
+
+      .movelist {
+        margin-top: 30px;
+        width: 100%;
+      }
+
+      .movelist h3 {
+        color: #e60a0a;
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 30px;
+        background: rgba(138, 3, 3, 0.1);
+        border: 1px solid #8a0303;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      th, td {
+        padding: 12px 15px;
+        text-align: left;
+        border-bottom: 1px solid #8a0303;
+      }
+
+      th {
+        background-color: rgba(230, 10, 10, 0.2);
+        color: #e60a0a;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      tr:hover {
+        background-color: rgba(138, 3, 3, 0.2);
+      }
+
+      /* Áudio */
+      .audio-control {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 10px;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        z-index: 1000;
+        border: 1px solid #e60a0a;
+      }
+
+      .audio-control button {
+        background: #ff0000;
+        border: none;
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        color: white;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s;
+      }
+
+      .audio-control button:hover {
+        background: #cc0000;
+        transform: scale(1.1);
+      }
+
+      .audio-control input[type="range"] {
+        width: 80px;
+        height: 5px;
+      }
+
+      /* Responsividade */
+      @media (max-width: 768px) {
+        .detalhes-personagem .imagem-destaque {
+          width: 280px;
+          height: 380px;
+        }
+        
+        .info-grid {
+          grid-template-columns: 1fr;
+        }
+        
+        th, td {
+          padding: 8px 10px;
+          font-size: 14px;
+        }
+      }

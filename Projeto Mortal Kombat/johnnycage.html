@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortal Kombat - Johnny Cage</title>
+     <link
+      href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/css/personagens.css">
+</head>
+<body class="personagem-johnny">
+    <button class="btn-voltar" onclick="window.location.href='index.html'">← Voltar para Seleção</button>
+
+    <header class="cabecalho">
+        <img class="logo" src="src/imagens/Mk1_logo.webp" alt="Logo Mortal Kombat">
+    </header>
+
+    <main class="container">
+        <section class="pagina-personagem">
+            <div class="detalhes-personagem">
+                <img class="imagem-destaque" src="https://wallpapers.com/images/hd/johnny-cage-1024-x-1365-wallpaper-z8vgqusbgauumymn.jpg" alt="Johnny Cage">
+                <h2 class="nome-destaque">Johnny Cage</h2>
+                
+                <div class="info-grid">
+                    <div class="info-box">
+                        <h3>Biografia</h3>
+                        <p>Johnny Cage é uma estrela de cinema de Hollywood com habilidades marciais excepcionais. Sua vaidade é superada apenas por seu talento de luta. Ele usa poderes de energia verde herdados de seus ancestrais.</p>
+                    </div>
+                    
+                    <div class="info-box">
+                        <h3>Habilidades Especiais</h3>
+                        <ul>
+                            <li>Green Shadow: Projeta um clone de energia</li>
+                            <li>Force Ball: Bola de energia projetada</li>
+                            <li>Shadow Kick: Chute potente com efeito sombra</li>
+                            <li>Nut Punch: Golpe baixo surpresa</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-box">
+                        <h3>Fatalities</h3>
+                        <ul>
+                            <li>Hollywood Walk of Fame: Estrela na calçada da fama esmaga o oponente</li>
+                            <li>Here's Johnny!: Imita cena do Iluminado com armação de porta</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-box">
+                        <h3>Curiosidades</h3>
+                        <p>Johnny Cage foi inspirado em atores de ação como Jean-Claude Van Damme. Ele é o único personagem que quebra a quarta parede, frequentemente fazendo referências a filmes e à cultura pop.</p>
+                    </div>
+                </div>
+
+                <div class="movelist">
+                    <h3>Lista de Movimentos</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Movimento</th>
+                                <th>Comando</th>
+                                <th>Dano</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Green Shadow</td>
+                                <td>↓, →, A</td>
+                                <td>7%</td>
+                            </tr>
+                            <tr>
+                                <td>Force Ball</td>
+                                <td>↓, ←, X</td>
+                                <td>9%</td>
+                            </tr>
+                            <tr>
+                                <td>Shadow Kick</td>
+                                <td>←, →, B</td>
+                                <td>11%</td>
+                            </tr>
+                            <tr>
+                                <td>Nut Punch</td>
+                                <td>↓, ↑, Y</td>
+                                <td>8%</td>
+                            </tr>
+                            <tr>
+                                <td>Star Power</td>
+                                <td>↓, ↓, X</td>
+                                <td>0%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="audio-control">
+        <button id="toggleAudio">🔈</button>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="0.5">
+    </div>
+    
+    <audio id="backgroundAudio" loop>
+        <source src="https://www.soundboard.com/handler/DownLoadTrack.ashx?cliptitle=Character+Select&filename=mp3/MTI1ODExMjUxMTI1ODQ0_J6ltttDxSbo.mp3" type="audio/mpeg">
+    </audio>
+     
+    <script src="src/js/audio.js"></script>
+</body>
+</html>

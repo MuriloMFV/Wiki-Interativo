@@ -1,0 +1,160 @@
+
+    body {
+	font-family: "Oxanium", cursive;
+	background-color: hsl(0, 0%, 0%);
+	color: #ffffff;
+}
+
+body::before{
+    content: "";
+    background-image: url(../imagens/bg-desktop.jpg);
+    background-repeat: repeat;
+    
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.2;
+} 
+    
+    h1 {
+      color: #c0392b;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    
+    h2 {
+      color: #2980b9;
+      margin-top: 30px;
+    }
+    
+    p {
+      line-height: 1.5;
+    }
+     .infobox{
+      display: flex;
+      flex-direction: row;
+      max-width: 1500px;
+      gap: 25px;
+      
+     }
+
+   
+   
+    
+    .infobox img {
+      width: 160px;
+      height: 300px;
+      margin-left: 50px;
+
+    }
+    .infobox h2 {
+      color: #47f4ff;
+      font-size: 18px;
+      margin-top: 0;
+    }
+    
+    .historia-personagem{
+      margin-right: 500px;
+    }
+
+
+    .infobox p {
+      margin-bottom: 10px;
+      margin-right: 600px ;
+    }
+
+    
+
+    
+    
+    ul {
+      padding-left: 20px;
+    }
+    
+    li {
+      margin-bottom: 5px;
+    }
+    
+    a {
+      color: #2980b9;
+      text-decoration: none;
+    }
+    
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .logo-personagens{
+      width: 300px;
+      height: 100px;
+      
+    }
+
+   
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.bio > div {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  border: 1px solid #47f4ff;
+}
+
+h2 {
+  color: #47f4ff;
+  border-bottom: 2px solid #c0392b;
+  padding-bottom: 10px;
+  margin-top: 0;
+}
+
+ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+strong {
+  color: #47f4ff;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+  border-top: 1px solid #47f4ff;
+}
+
+/* Melhorias para a infobox */
+.infomaçoes-personagem p {
+  margin-bottom: 10px;
+  margin-right: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .infobox {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .infobox img {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+}
+
+
+  
+  

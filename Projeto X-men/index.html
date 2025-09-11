@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto X-Men - Semana do Zero Ao Programador Contratado</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/estilos.css">
+    <link rel="stylesheet" href="./src/css/responsivo.css">
+  </head>
+  <body>
+    <header class="cabecalho">
+      <img class="logo" src="./src/imagens/logo.svg" alt="Logo x-men">
+    </header>
+
+    <main class="selecao-de-personagens">
+      <section class="personagens">
+        <h1 class="titulo">Selecione um personagem</h1>
+        <ul class="lista-de-personagens">
+          <li class="personagem selecionado" id="ciclope" data-name="Ciclope" data-description=" Ciclope foi um dos primeiros alunos do Professor X (o cérebro da equipe), fazendo parte da primeira formação dos X-Men.">
+          <a href="cliclope.html"> <img
+              src="./src/imagens/card-ciclope.jpg"
+              alt="Personagem Ciclope"  
+              /></a>
+          </li>
+          <li class="personagem" id="jean-grey" data-name="Jean Grey" data-description="Jean Grey é uma mutante nível ômega e o principal avatar da Força Fênix, no qual manifesta poderes cósmicos. A telepatia e telecinese">
+            <a href="jean-grey.html">
+            <img
+              src="./src/imagens/card-jean-grey.jpg"
+              alt="Personagem Jean Grey"
+            /></a>
+          </li>
+
+          <li class="personagem" id="lince-negra" data-name="Lince Negra" data-description="Ela tem o poder de atravessar matéria sólida,campos de energia,rajadas ópticas, continuando intacta,e também tem o poder de andar no ar">
+            <a href="lince-negra.html">
+            <img
+              src="./src/imagens/card-lince-negra.jpg"
+              alt="Personagem Lince Negra"
+            /></a>
+          </li>
+
+          <li class="personagem" id="tempestade" data-name="Tempestade" data-description="Tem o poder de controlar as forças da natureza, muito poderosa ela pode produzir raios, chuvas, gelos, ventos, neblina, entre outros efeitos">
+            <a href="tempestade.html">
+            <img
+              src="./src/imagens/card-tempestade.jpg"
+              alt="Personagem Tempestade"
+            /></a>
+          </li>
+
+          <li class="personagem" id="vampira" data-name="Vampira" data-description="Ela tem o poder de absorver a vitalidade e memória das pessoas que toca ou no caso dos mutantes os poderes e a memória, mas só temporariamente">
+            <a href="vampira.html">
+            <img
+              src="./src/imagens/card-vampira.jpg"
+              alt="Personagem Vampira"
+            /></a>
+          </li>
+
+          <li class="personagem" id="wolverine" data-name="Wolverine" data-description="Wolverine tem capacidades físicas aprimoradas como fator de cura e três garras retratáveis ​em cada mão. Wolverine membro do X-Men, Tropa Alfa e Vingadores.">
+            <a href="wolverine.html">
+            <img
+              src="./src/imagens/card-wolverine.jpg"
+              alt="Personagem Wolverine"
+            /></a>
+          </li>
+
+          <li class="personagem" id="noturno" data-name="Noturno" data-description="Salvo pelo Professor Charles Xavier, Kurt entrou para os X-Men e tem lutado pela coexistência pacífica entre mutantes e humanos pela maior parte de sua vida. ">
+            <a href="noturno.html">
+            <img
+              src="./src/imagens/card-noturno.jpg"
+              alt="Personagem Noturno"
+            /></a>
+          </li>
+
+          <li class="personagem" id="magneto" data-name="Magneto" data-description="Magneto foi o primeiro vilão dos X-Men, Magneto tem sua origem na Alemanha. Sua infância foi marcada pela ascensão de Hitler e do Partido Nazista.">
+            <a href="magneto.html">
+            <img
+              src="./src/imagens/card-magneto.jpg"
+              alt="Personagem Magneto"
+            /></a>
+          </li>
+        </ul>
+      </section>
+      <section class="personagem-selecionado">
+        <img
+          class="personagem-grande"
+          src="./src/imagens/card-ciclope.png"
+          alt="Personagem Selecionado"
+        />
+
+        <div class="informacoes-personagem">
+          <h2 class="nome-personagem" id="nome-personagem">Ciclope</h2>
+          <p class="descricao-personagem" id="descricao-personagem">
+
+            Ciclope foi um dos primeiros alunos do Professor X (o cérebro da equipe), fazendo parte da primeira formação dos X-Men.
+           
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="rodape">
+      <p class="direitos-autorais">
+        &copy; 2025 - Todos os direitos reservados.
+      </p>
+      <p class="referencia">
+        
+                <a
+          href="../Projeto Mortal Kombat/index.html">Wiki - Mortal Kombat</a>
+      </p>
+      <p class="desenvolvido-por">
+        Desenvolvido por
+        <a href="https://github.com/MuriloMFV" target="_blank">Murilo Feliciano</a>
+      </p>
+    <script src="./src/js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortal Kombat - Kitana</title>
+    <link rel="stylesheet" href="src/css/personagens.css">
+     <link
+      href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body class="personagem-kitana">
+    <button class="btn-voltar" onclick="window.location.href='index.html'">← Voltar para Seleção</button>
+
+    <header class="cabecalho">
+        <img class="logo" src="src/imagens/Mk1_logo.webp" alt="Logo Mortal Kombat">
+    </header>
+
+    <main class="container">
+        <section class="pagina-personagem">
+            <div class="detalhes-personagem">
+                <img class="imagem-destaque" src="https://preview.redd.it/x18de30a6cw41.jpg?width=640&crop=smart&auto=webp&s=63810be47332ebbb4515ac75cc5380262570c17a" alt="Kitana">
+                <h2 class="nome-destaque">Kitana</h2>
+                
+                <div class="info-grid">
+                    <div class="info-box">
+                        <h3>Biografia</h3>
+                        <p>Kitana é a princesa do reino de Edenia. Mestra no uso de leques cortantes e com grande agilidade. Inicialmente aliada de Shao Kahn, ela depois descobre a verdade sobre sua origem e se junta aos heróis.</p>
+                    </div>
+                    
+                    <div class="info-box">
+                        <h3>Habilidades Especiais</h3>
+                        <ul>
+                            <li>Fan Throw: Arremesso de leques cortantes</li>
+                            <li>Fan Lift: Levanta oponentes com vento dos leques</li>
+                            <li>Square Wave: Movimento acrobático de evasão</li>
+                            <li>Edenian Fade: Teletransporte rápido</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-box">
+                        <h3>Fatalities</h3>
+                        <ul>
+                            <li>Kiss of Death: Beija o oponente e suga sua alma</li>
+                            <li>Royal Execution: Decapitação com leques afiados</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-box">
+                        <h3>Curiosidades</h3>
+                        <p>Kitana foi criada por Shao Kahn acreditando que ele era seu pai, mas na verdade ele assassinou seu verdadeiro pai, o rei Jerrod de Edenia. Ela é irmã gêmea de Mileena.</p>
+                    </div>
+                </div>
+
+                <div class="movelist">
+                    <h3>Lista de Movimentos</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Movimento</th>
+                                <th>Comando</th>
+                                <th>Dano</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Fan Throw</td>
+                                <td>↓, →, X</td>
+                                <td>7%</td>
+                            </tr>
+                            <tr>
+                                <td>Fan Lift</td>
+                                <td>↓, ↑, A</td>
+                                <td>5%</td>
+                            </tr>
+                            <tr>
+                                <td>Square Wave</td>
+                                <td>↓, ↓, B</td>
+                                <td>9%</td>
+                            </tr>
+                            <tr>
+                                <td>Edenian Fade</td>
+                                <td>←, →, A</td>
+                                <td>0%</td>
+                            </tr>
+                            <tr>
+                                <td>Royal Protection</td>
+                                <td>↓, ←, Y</td>
+                                <td>8%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="audio-control">
+        <button id="toggleAudio">🔈</button>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="0.5">
+    </div>
+    
+    <audio id="backgroundAudio" loop>
+        <source src="https://www.soundboard.com/handler/DownLoadTrack.ashx?cliptitle=Character+Select&filename=mp3/MTI1ODExMjUxMTI1ODQ0_J6ltttDxSbo.mp3" type="audio/mpeg">
+    </audio>
+     
+    <script src="src/js/audio.js"></script>
+</body>
+</html>

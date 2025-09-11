@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortal Kombat - Sonya Blade</title>
+    <link rel="stylesheet" href="src/css/personagens.css">
+</head>
+<body class="personagem-sonya">
+    <button class="btn-voltar" onclick="window.location.href='index.html'">← Voltar para Seleção</button>
+
+    <header class="cabecalho">
+        <img class="logo" src="src/imagens/Mk1_logo.webp" alt="Logo Mortal Kombat">
+    </header>
+
+    <main class="container">
+        <section class="pagina-personagem">
+            <div class="detalhes-personagem">
+                <img class="imagem-destaque" src="https://sm.ign.com/ign_br/screenshot/default/sony_zkgu.jpg" alt="Sonya Blade">
+                <h2 class="nome-destaque">Sonya Blade</h2>
+                
+                <div class="info-grid">
+                    <div class="info-box">
+                        <h3>Biografia</h3>
+                        <p>Sonya Blade é uma Major das forças especiais americanas e líder da unidade de operações especiais Earthrealm. Especialista em artes marciais e combate corpo a corpo, ela persegue incansavelmente o criminoso Kano.</p>
+                    </div>
+                    
+                    <div class="info-box">
+                        <h3>Habilidades Especiais</h3>
+                        <ul>
+                            <li>Energy Rings: Anéis de energia projetados</li>
+                            <li>Leg Grab: Agarra o oponente pelas pernas</li>
+                            <li>Arc Kick: Chute em arco giratório</li>
+                            <li>Square Wave Punch: Série de socos rápidos</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-box">
+                        <h3>Fatalities</h3>
+                        <ul>
+                            <li>Kiss of Death: Beija o oponente e explode sua cabeça</li>
+                            <li>Fragility Squeeze: Esmaga o oponente com um abraço mortal</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-box">
+                        <h3>Curiosidades</h3>
+                        <p>Sonya Blade foi uma das primeiras personagens femininas em jogos de luta e uma das poucas que não possui poderes sobrenaturais, confiando apenas em seu treinamento militar.</p>
+                    </div>
+                </div>
+
+                <div class="movelist">
+                    <h3>Lista de Movimentos</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Movimento</th>
+                                <th>Comando</th>
+                                <th>Dano</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Energy Rings</td>
+                                <td>↓, →, X</td>
+                                <td>8%</td>
+                            </tr>
+                            <tr>
+                                <td>Leg Grab</td>
+                                <td>↓, ←, Y</td>
+                                <td>6%</td>
+                            </tr>
+                            <tr>
+                                <td>Arc Kick</td>
+                                <td>→, ↓, →, B</td>
+                                <td>10%</td>
+                            </tr>
+                            <tr>
+                                <td>Square Wave Punch</td>
+                                <td>←, →, X</td>
+                                <td>12%</td>
+                            </tr>
+                            <tr>
+                                <td>Military Stance</td>
+                                <td>↓, ↓, A</td>
+                                <td>0%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="audio-control">
+        <button id="toggleAudio">🔈</button>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="0.5">
+    </div>
+    
+    <audio id="backgroundAudio" loop>
+        <source src="https://www.soundboard.com/handler/DownLoadTrack.ashx?cliptitle=Character+Select&filename=mp3/MTI1ODExMjUxMTI1ODQ0_J6ltttDxSbo.mp3" type="audio/mpeg">
+    </audio>
+     
+    <script src="src/js/audio.js"></script>
+</body>
+</html>

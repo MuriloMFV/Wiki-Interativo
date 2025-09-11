@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortal Kombat - Liu Kang</title>
+     <link
+      href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/css/personagens.css">
+</head>
+<body class="personagem-liukang">
+    <button class="btn-voltar" onclick="window.location.href='index.html'">← Voltar para Seleção</button>
+
+    <header class="cabecalho">
+        <img class="logo" src="src/imagens/Mk1_logo.webp" alt="Logo Mortal Kombat">
+    </header>
+
+    <main class="container">
+        <section class="pagina-personagem">
+            <div class="detalhes-personagem">
+                <img class="imagem-destaque" src="https://static.wikia.nocookie.net/ub10fanfiction/images/8/8c/Liu_Kang_%28MK_Shaolin_Monks%29.jpg/revision/latest?cb=20151211193042&path-prefix=pt-br" alt="Liu Kang">
+                <h2 class="nome-destaque">Liu Kang</h2>
+                
+                <div class="info-grid">
+                    <div class="info-box">
+                        <h3>Biografia</h3>
+                        <p>Liu Kang é o campeão de Mortal Kombat e o escolhido de Raiden. Mestre do Kung Fu com poderes de dragão, ele é o principal protetor do reino da Terra e representa a força do bem no torneio.</p>
+                    </div>
+                    
+                    <div class="info-box">
+                        <h3>Habilidades Especiais</h3>
+                        <ul>
+                            <li>Flying Kick: Chute voador poderoso</li>
+                            <li>Fireball: Bola de fogo projetada</li>
+                            <li>Bicycle Kick: Série de chutes rápidos</li>
+                            <li>Dragon's Fire: Transformação em dragão</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-box">
+                        <h3>Fatalities</h3>
+                        <ul>
+                            <li>Dragon Transformation: Transforma-se em um dragão e consome o oponente</li>
+                            <li>Super Kick: Executa um chute tão poderoso que decapita o oponente</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-box">
+                        <h3>Curiosidades</h3>
+                        <p>Liu Kang foi o primeiro personagem a conseguir vencer Shang Tsung no torneio Mortal Kombat, tornando-se o grande campeão e salvando a Terra da invasão de Outworld.</p>
+                    </div>
+                </div>
+
+                <div class="movelist">
+                    <h3>Lista de Movimentos</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Movimento</th>
+                                <th>Comando</th>
+                                <th>Dano</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Flying Kick</td>
+                                <td>→, →, Y</td>
+                                <td>12%</td>
+                            </tr>
+                            <tr>
+                                <td>Fireball</td>
+                                <td>↓, →, X</td>
+                                <td>8%</td>
+                            </tr>
+                            <tr>
+                                <td>Bicycle Kick</td>
+                                <td>↓, ↓, B</td>
+                                <td>15%</td>
+                            </tr>
+                            <tr>
+                                <td>Dragon's Fire</td>
+                                <td>←, →, ←, A</td>
+                                <td>20%</td>
+                            </tr>
+                            <tr>
+                                <td>Low Fireball</td>
+                                <td>↓, ←, X</td>
+                                <td>7%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="audio-control">
+        <button id="toggleAudio">🔈</button>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="0.5">
+    </div>
+    
+    <audio id="backgroundAudio" loop>
+        <source src="https://www.soundboard.com/handler/DownLoadTrack.ashx?cliptitle=Character+Select&filename=mp3/MTI1ODExMjUxMTI1ODQ0_J6ltttDxSbo.mp3" type="audio/mpeg">
+    </audio>
+     
+    <script src="src/js/audio.js"></script>
+</body>
+</html>

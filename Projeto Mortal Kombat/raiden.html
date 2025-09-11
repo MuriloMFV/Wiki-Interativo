@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mortal Kombat - Guide</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/css/personagens.css" />
+  </head>
+
+
+    <header class="cabecalho">
+      <img class="logo" src="src/imagens/Mk1_logo.webp" alt="Logo Mortal Kombat" />
+    </header>
+
+    <main class="container">
+      <!-- Página individual do Raiden -->
+      <section class="pagina-personagem" id="pagina-raiden">
+        <div class="detalhes-personagem">
+          <img class="imagem-destaque" src="https://i.pinimg.com/736x/6c/18/fc/6c18fc29e5e2974482bc85f8f37f948a.jpg" alt="Raiden">
+          <h2 class="nome-destaque">Raiden</h2>
+          
+          <div class="info-grid">
+            <div class="info-box">
+              <h3>Biografia</h3>
+              <p>Raiden é o Deus do Trovão e protetor do reino da Terra. Ele é um dos personagens mais poderosos do universo Mortal Kombat, com a capacidade de controlar relâmpagos e tempestades.</p>
+            </div>
+            
+            <div class="info-box">
+              <h3>Habilidades Especiais</h3>
+              <ul>
+                <li>Lightning Bolt: Lança um raio contra o oponente</li>
+                <li>Teleport: Teletransporte rápido</li>
+                <li>Electric Fly: Ataca voando com eletricidade</li>
+                <li>Shocker: Choque elétrico em curta distância</li>
+              </ul>
+            </div>
+            
+            <div class="info-box">
+              <h3>Fatalities</h3>
+              <ul>
+                <li>Electrocution: Electrocuta o oponente até carbonizá-lo</li>
+                <li>Lightning Strike: Invoca um raio que destrói o oponente</li>
+              </ul>
+            </div>
+            
+            <div class="info-box">
+              <h3>Curiosidades</h3>
+              <p>Raiden é baseado no deus japonês do trovão, Raijin. Ele é um dos poucos personagens que apareceu em todos os jogos da série principal de Mortal Kombat.</p>
+            </div>
+          </div>
+
+          <div class="movelist">
+            <h3>Lista de Movimentos</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Movimento</th>
+                  <th>Comando</th>
+                  <th>Dano</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Lightning Bolt</td>
+                  <td>→, →, X</td>
+                  <td>9%</td>
+                </tr>
+                <tr>
+                  <td>Teleport</td>
+                  <td>↓, ↑</td>
+                  <td>0%</td>
+                </tr>
+                <tr>
+                  <td>Electric Fly</td>
+                  <td>↓, ↑, Y</td>
+                  <td>11%</td>
+                </tr>
+                <tr>
+                  <td>Shocker</td>
+                  <td>←, →, A</td>
+                  <td>8%</td>
+                </tr>
+                <tr>
+                  <td>Thunder Cloud</td>
+                  <td>↓, ↓, B</td>
+                  <td>10%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Controle de Áudio -->
+    <div class="audio-control">
+      <button id="toggleAudio">🔈</button>
+      <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="0.5">
+    </div>
+    
+    <!-- Elemento de Áudio -->
+    <audio id="backgroundAudio" loop>
+      <source src="https://www.soundboard.com/handler/DownLoadTrack.ashx?cliptitle=Character+Select&filename=mp3/MTI1ODExMjUxMTI1ODQ0_J6ltttDxSbo.mp3" type="audio/mpeg">
+      Seu navegador não suporta o elemento de áudio.
+    </audio>
+     
+    <script>
+      // Controle do áudio em loop
+      document.addEventListener('DOMContentLoaded', function() {
+        const audio = document.getElementById('backgroundAudio');
+        const toggleButton = document.getElementById('toggleAudio');
+        const volumeControl = document.getElementById('volumeControl');
+        
+        // Tenta reproduzir o áudio
+        audio.volume = 0.5; // Volume inicial em 50%
+        
+        // Política de autoplay - só inicia após interação do usuário
+        let audioStarted = false;
+        
+        function startAudio() {
+          if (!audioStarted) {
+            audio.play().catch(error => {
+              console.log('Reprodução automática impedida:', error);
+            });
+            audioStarted = true;
+          }
+        }
+        
+        // Iniciar áudio no primeiro clique em qualquer lugar da página
+        document.body.addEventListener('click', function() {
+          startAudio();
+        }, { once: true });
+        
+        // Controle de play/pause
+        toggleButton.addEventListener('click', function() {
+          if (audio.paused) {
+            audio.play();
+            toggleButton.textContent = '🔊';
+          } else {
+            audio.pause();
+            toggleButton.textContent = '🔈';
+          }
+        });
+        
+        // Controle de volume
+        volumeControl.addEventListener('input', function() {
+          audio.volume = this.value;
+          if (this.value == 0) {
+            toggleButton.textContent = '🔇';
+          } else {
+            toggleButton.textContent = audio.paused ? '🔈' : '🔊';
+          }
+        });
+        
+        // Atualizar ícone quando o áudio terminar (embora esteja em loop)
+        audio.addEventListener('pause', function() {
+          if (!audio.paused) return;
+          toggleButton.textContent = '🔈';
+        });
+      });
+    </script>
+  </body>
+</html>
+
+    
+        
+            
+   

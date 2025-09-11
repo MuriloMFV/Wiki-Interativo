@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortal Kombat - Shang Tsung</title>
+    <link rel="stylesheet" href="src/css/personagens.css">
+</head>
+<body class="personagem-shang">
+    <button class="btn-voltar" onclick="window.location.href='index.html'">← Voltar para Seleção</button>
+
+    <header class="cabecalho">
+        <img class="logo" src="src/imagens/Mk1_logo.webp" alt="Logo Mortal Kombat">
+    </header>
+
+    <main class="container">
+        <section class="pagina-personagem">
+            <div class="detalhes-personagem">
+                <img class="imagem-destaque" src="https://i.pinimg.com/736x/b9/08/b9/b908b9af3ee38fd708960c0288ce0e98.jpg" alt="Shang Tsung">
+                <h2 class="nome-destaque">Shang Tsung</h2>
+                
+                <div class="info-grid">
+                    <div class="info-box">
+                        <h3>Biografia</h3>
+                        <p>Shang Tsung é um feiticeiro ancião e mestre de magia negra. Capaz de absorver as almas de seus oponentes e se transformar neles. Ele é o organizador do torneio Mortal Kombat a mando de Shao Kahn.</p>
+                    </div>
+                    
+                    <div class="info-box">
+                        <h3>Habilidades Especiais</h3>
+                        <ul>
+                            <li>Soul Steal: Rouba a alma do oponente</li>
+                            <li>Shape Shift: Transforma-se em outros lutadores</li>
+                            <li>Ground Fire: Invoca chamas do chão</li>
+                            <li>Skull Projectile: Lança caveiras mágicas</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-box">
+                        <h3>Fatalities</h3>
+                        <ul>
+                            <li>Soul Steal: Absorve a alma e o corpo do oponente</li>
+                            <li>Kintaro Morph: Transforma-se em Kintaro e esmaga o oponente</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-box">
+                        <h3>Curiosidades</h3>
+                        <p>Shang Tsung é um dos vilões mais icônicos da série Mortal Kombat. Originalmente, ele era um homem velho, mas ao absorver almas, consegue recuperar sua juventude temporariamente.</p>
+                    </div>
+                </div>
+
+                <div class="movelist">
+                    <h3>Lista de Movimentos</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Movimento</th>
+                                <th>Comando</th>
+                                <th>Dano</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Soul Steal</td>
+                                <td>↓, →, A</td>
+                                <td>6%</td>
+                            </tr>
+                            <tr>
+                                <td>Shape Shift</td>
+                                <td>↓, ↑, X</td>
+                                <td>0%</td>
+                            </tr>
+                            <tr>
+                                <td>Ground Fire</td>
+                                <td>↓, ↓, Y</td>
+                                <td>9%</td>
+                            </tr>
+                            <tr>
+                                <td>Skull Projectile</td>
+                                <td>→, →, X</td>
+                                <td>8%</td>
+                            </tr>
+                            <tr>
+                                <td>Dark Magic</td>
+                                <td>←, →, ←, B</td>
+                                <td>11%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="audio-control">
+        <button id="toggleAudio">🔈</button>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="0.5">
+    </div>
+    
+    <audio id="backgroundAudio" loop>
+        <source src="https://www.soundboard.com/handler/DownLoadTrack.ashx?cliptitle=Character+Select&filename=mp3/MTI1ODExMjUxMTI1ODQ0_J6ltttDxSbo.mp3" type="audio/mpeg">
+    </audio>
+     
+    <script src="src/js/audio.js"></script>
+</body>
+</html>

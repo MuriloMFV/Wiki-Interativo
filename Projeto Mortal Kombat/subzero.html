@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortal Kombat - Sub-Zero</title>
+        <link
+        href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="src/css/personagens.css">
+</head>
+<body class="personagem-subzero">
+    <button class="btn-voltar" onclick="window.location.href='index.html'">← Voltar para Seleção</button>
+
+    <header class="cabecalho">
+        <img class="logo" src="src/imagens/Mk1_logo.webp" alt="Logo Mortal Kombat">
+    </header>
+
+    <main class="container">
+        <section class="pagina-personagem">
+            <div class="detalhes-personagem">
+                <img class="imagem-destaque" src="https://greghornart.com/cdn/shop/products/Sub-Zero_1024x1024.jpg?v=1524306044" alt="Sub-Zero">
+                <h2 class="nome-destaque">Sub-Zero</h2>
+                
+                <div class="info-grid">
+                    <div class="info-box">
+                        <h3>Biografia</h3>
+                        <p>Sub-Zero, também conhecido como Kuai Liang, é o Grande Mestre do Lin Kuei. Ele é um criomante capaz de controlar o gelo e criar armas congeladas. Irmão do Scorpion em algumas versões da história.</p>
+                    </div>
+                    
+                    <div class="info-box">
+                        <h3>Habilidades Especiais</h3>
+                        <ul>
+                            <li>Ice Ball: Congela o oponente no lugar</li>
+                            <li>Slide: Ataque deslizante</li>
+                            <li>Ice Clone: Cria uma cópia de gelo de si mesmo</li>
+                            <li>Ice Hammer: Cria um martelo de gelo para ataques</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-box">
+                        <h3>Fatalities</h3>
+                        <ul>
+                            <li>Spinal Smash: Congela o oponente e arranca sua coluna vertebral</li>
+                            <li>Ice-Cutioner: Esfaqueia o oponente com estilhaços de gelo</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-box">
+                        <h3>Curiosidades</h3>
+                        <p>Existem dois personagens que usaram o nome Sub-Zero: o irmão mais velho Bi-Han e o mais novo Kuai Liang. Ambos são personagens importantes na saga Mortal Kombat.</p>
+                    </div>
+                </div>
+
+                <div class="movelist">
+                    <h3>Lista de Movimentos</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Movimento</th>
+                                <th>Comando</th>
+                                <th>Dano</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Ice Ball</td>
+                                <td>↓, →, X</td>
+                                <td>7%</td>
+                            </tr>
+                            <tr>
+                                <td>Ice Slide</td>
+                                <td>←, →, Y</td>
+                                <td>10%</td>
+                            </tr>
+                            <tr>
+                                <td>Ice Clone</td>
+                                <td>↓, ←, A</td>
+                                <td>5%</td>
+                            </tr>
+                            <tr>
+                                <td>Ice Hammer</td>
+                                <td>→, ↓, →, B</td>
+                                <td>12%</td>
+                            </tr>
+                            <tr>
+                                <td>Deep Freeze</td>
+                                <td>↓, ↑, X</td>
+                                <td>9%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="audio-control">
+        <button id="toggleAudio">🔈</button>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="0.5">
+    </div>
+    
+    <audio id="backgroundAudio" loop>
+        <source src="https://www.soundboard.com/handler/DownLoadTrack.ashx?cliptitle=Character+Select&filename=mp3/MTI1ODExMjUxMTI1ODQ0_J6ltttDxSbo.mp3" type="audio/mpeg">
+    </audio>
+     
+    <script src="src/js/audio.js"></script>
+</body>
+</html>

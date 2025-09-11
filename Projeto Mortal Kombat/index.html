@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mortal Kombat - Guide</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/estilos.css">
+    <link rel="stylesheet" href="./src/css/responsivo.css">
+    
+    <style>
+      /* Estilos para o controle de áudio */
+      .audio-control {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 10px;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        z-index: 1000;
+      }
+      
+      .audio-control button {
+        background: #ff0000;
+        border: none;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        color: white;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .audio-control button:hover {
+        background: #cc0000;
+      }
+      
+      .audio-control input[type="range"] {
+        width: 80px;
+      }
+
+      .rodape {
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 20px;
+        text-align: center;
+        border-top: 2px solid #e60a0a;
+        margin-top: auto;
+        width: 100%;
+      }
+
+      .rodape p {
+        margin: 8px 0;
+        color: #fff;
+        font-size: 14px;
+      }
+
+      .rodape a {
+        color: #e60a0a;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .rodape a:hover {
+        color: #ff5252;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="cabecalho">
+      <img class="logo" src="./src/imagens/Mk1_logo.webp" alt="Logo Mortal Kombat" />
+    </header>
+
+    <main class="selecao-de-personagens">
+      <section class="personagens">
+        <h1 class="titulo">Selecione um Lutador</h1>
+        <ul class="lista-de-personagens">
+          <li class="personagem selecionado" id="scorpion" data-name="Scorpion" data-description="Um espectro vingativo que retornou dos reinos infernais. Seu poder principal é seu 'Spear' (lança) e teletransporte. Sua famosa frase: 'Get over here!'">
+            <a href="scorpion.html">
+            <img
+              src="./src/imagens/Scorpion-Mortal-Kombat-2-Bio.webp"
+              alt="Personagem Scorpion"  
+            /></a>
+          </li>
+          <li class="personagem" id="subzero" data-name="Sub-Zero" data-description="Mestre do gelo e membro do clã Lin Kuei. Capaz de congelar oponentes e criar armas de gelo. Irmão do Scorpion em algumas versões da história.">
+            <a href="subzero.html">
+            <img
+              src="./src/imagens/Sub-Zero-Mortal-Kombat-2-Bio.webp"
+              alt="Personagem Sub-Zero"
+            /></a>
+          </li>
+
+          <li class="personagem" id="raiden" data-name="Raiden" data-description="Deus do Trovão e protetor do reino da Terra. Controla os raios e relâmpagos, podendo se teleportar e lançar poderosos ataques elétricos.">
+            <a href="raiden.html">
+            <img
+              src="./src/imagens/Raiden-Mortal-Kombat-2-Bio.webp"
+              alt="Personagem Raiden"
+            /></a>
+          </li>
+
+          <li class="personagem" id="liukang" data-name="Liu Kang" data-description="Campeão de Mortal Kombat e escolhido de Raiden. Mestre do Kung Fu com poderes de dragão. Representa a força do bem no torneio.">
+            <a href="liukang.html">
+            <img
+              src="./src/imagens/Liu-Kang-Mortal-Kombat-2-Bio.webp"
+              alt="Personagem Liu Kang"
+            /></a>
+          </li>
+
+          <li class="personagem" id="sonya" data-name="Sonya Blade" data-description="Major das forças especiais americanas. Especialista em artes marciais e combate corpo a corpo. Persegue o criminoso Kano incessantemente.">
+            <a href="sonya.html">
+            <img
+              src="./src/imagens/sonyablade.png"
+              alt="Personagem Sonya Blade"
+            /></a>
+          </li>
+
+          <li class="personagem" id="johnnycage" data-name="Johnny Cage" data-description="Estrela de cinema de Hollywood com habilidades marciais excepcionais. Sua vaidade é superada apenas por seu talento de luta. Usa poderes de energia verde.">
+            <a href="johnnycage.html">
+            <img
+              src="./src/imagens/Johnny-Cage-Mortal-Kombat-2-Bio.webp"
+              alt="Personagem Johnny Cage"
+            /></a>
+          </li>
+
+          <li class="personagem" id="kitana" data-name="Kitana" data-description="Princesa do reino de Edenia. Mestra no uso de leques cortantes e com grande agilidade. Inicialmente aliada de Shao Kahn, depois se junta aos heróis.">
+            <a href="kitana.html">
+            <img
+              src="./src/imagens/Kitana-Mortal-Kombat-2-Bio.webp"
+              alt="Personagem Kitana"
+            /></a>
+          </li>
+
+          <li class="personagem" id="shangkung" data-name="Shang Tsung" data-description="Feiticeiro ancião e mestre de magia negra. Capaz de absorver as almas de seus oponentes e se transformar neles. Organizador do torneio Mortal Kombat.">
+            <a href="shangtshung.html">
+            <img
+              src="./src/imagens/Shang-Tsung-Mortal-Kombat-2-Bio.webp"
+              alt="Personagem Shang Tsung"
+            /></a>
+          </li>
+        </ul>
+      </section>
+      <section class="personagem-selecionado">
+        <img
+          class="personagem-grande"
+          src="./src/imagens/card-scorpion.webp"
+          alt="Personagem Selecionado"
+        />
+
+        <div class="informacoes-personagem">
+          <h2 class="nome-personagem" id="nome-personagem">Scorpion</h2>
+          <p class="descricao-personagem" id="descricao-personagem">
+
+            
+            Um espectro vingativo que retornou dos reinos infernais. Seu poder principal é seu 'Spear' (lança) e teletransporte. Sua famosa frase: 'Get over here!'
+           
+          </p>
+        </div>
+      </section>
+    </main>
+<br><br><br>
+ <footer class="rodape">
+      <p class="direitos-autorais">
+        &copy; 2025 - Todos os direitos reservados.
+      </p>
+      <p class="referencia">
+        
+                <a
+          href="../Projeto Mortal Kombat/mk-site/index.html">Wiki - Mortal Kombat</a>
+      </p>
+      <p class="desenvolvido-por">
+        Desenvolvido por
+        <a href="https://github.com/MuriloMFV" target="_blank">Murilo Feliciano</a>
+      </p>
+
+    <!-- Controle de Áudio -->
+    <div class="audio-control">
+      <button id="toggleAudio">🔈</button>
+      <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="0.5">
+    </div>
+   
+    <!-- Elemento de Áudio -->
+    <audio id="backgroundAudio" loop>
+      <source src="./src/imagens/Mortal Kombat II - Character Select screen.mp3" type="audio/mpeg">
+      Seu navegador não suporta o elemento de áudio.
+    </audio>
+     
+    <script src="./src/js/index.js"></script>
+    <script>
+      // Controle do áudio em loop
+      document.addEventListener('DOMContentLoaded', function() {
+        const audio = document.getElementById('backgroundAudio');
+        const toggleButton = document.getElementById('toggleAudio');
+        const volumeControl = document.getElementById('volumeControl');
+        
+        // Tenta reproduzir o áudio
+        audio.volume = 0.5; // Volume inicial em 50%
+        
+        // Política de autoplay - só inicia após interação do usuário
+        let audioStarted = false;
+        
+        function startAudio() {
+          if (!audioStarted) {
+            audio.play().catch(error => {
+              console.log('Reprodução automática impedida:', error);
+            });
+            audioStarted = true;
+          }
+        }
+        
+        // Iniciar áudio no primeiro clique em qualquer lugar da página
+        document.body.addEventListener('click', function() {
+          startAudio();
+        }, { once: true });
+        
+        // Controle de play/pause
+        toggleButton.addEventListener('click', function() {
+          if (audio.paused) {
+            audio.play();
+            toggleButton.textContent = '🔊';
+          } else {
+            audio.pause();
+            toggleButton.textContent = '🔈';
+          }
+        });
+        
+        // Controle de volume
+        volumeControl.addEventListener('input', function() {
+          audio.volume = this.value;
+          if (this.value == 0) {
+            toggleButton.textContent = '🔇';
+          } else {
+            toggleButton.textContent = audio.paused ? '🔈' : '🔊';
+          }
+        });
+        
+        // Atualizar ícone quando o áudio terminar (embora esteja em loop)
+        audio.addEventListener('pause', function() {
+          if (!audio.paused) return;
+          toggleButton.textContent = '🔈';
+        });
+      });
+    </script>
+  </body>
+</html>
